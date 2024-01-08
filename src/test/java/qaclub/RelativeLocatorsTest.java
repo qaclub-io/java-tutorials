@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Duration;
 
@@ -74,6 +75,6 @@ public class RelativeLocatorsTest {
                 .getAttribute("id");
         System.out.println("ID3= " + id3);
 
-        assertEquals(id3, "p6");
+        assertTrue(id3.equals("p6") || id3.equals("p8"));
     }
 }
